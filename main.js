@@ -12,7 +12,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
 // port on
-var PORT = 8080;
+var PORT = process.env.PORT || 4000;
 
 
 // Server needs to start to listen
