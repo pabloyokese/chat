@@ -8,7 +8,7 @@ $(function(){
 	socket.on('connect',function(){
 		console.log('connected with socket');
 		init();
-	});	// connect
+	});	// close connect
 
 
 
@@ -35,7 +35,7 @@ $(function(){
 				console.log('Nick name ' + nickname +  ' is not available.');				
 			}
 		});
-	}; // cloase setNickname
+	}; // close setNickname
 
 	var setUpChat = function(nickname){
 		$login.hide();
@@ -49,7 +49,7 @@ $(function(){
 		socket.on('message',function(nickname , message){
 			addMessage(nickname , message);
 		});
-	}; // Close setUpChat
+	}; // close setUpChat
 
 	var sendMessage = function (msg){
 		socket.emit('message',msg);
